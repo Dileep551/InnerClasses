@@ -4,10 +4,10 @@ class OuterClass {
     String name;
 
     public void printName(){
-        System.out.println(name);
+        System.out.println("Hello I am in Outer Class");
     }
 
-   static class InnerClass{
+    static class InnerClass{
 
         public void printInnerClass(){
 
@@ -23,7 +23,9 @@ class Demo{
         OuterClass oc = new OuterClass();
         oc.printName();
 
-        OuterClass.InnerClass obj = new OuterClass.InnerClass();
+//        OuterClass.InnerClass obj = oc.new InnerClass(); //If Inner class is not static
+
+        OuterClass.InnerClass obj = new OuterClass.InnerClass(); //If inner class is static
         obj.printInnerClass();
 
     }
